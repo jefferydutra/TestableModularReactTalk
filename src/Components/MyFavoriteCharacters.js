@@ -1,12 +1,15 @@
 import React from 'react';
 import FavoriteCharacter from './FavoriteCharacter';
 import _ from 'lodash';
+function setFavoriteSeriesWithId(setAsFavoriteSeries, id) {
+    return () => setAsFavoriteSeries(id);
+}
 
 function renderCharacter(character, setAsFavoriteSeries) {
     return (
         <FavoriteCharacter
             key={character.name}
-            setAsFavoriteSeries={setAsFavoriteSeries.bind(null, character.id)}
+            setAsFavoriteSeries={setFavoriteSeriesWithId(setAsFavoriteSeries, character.id)}
             character={character}
         />
     );

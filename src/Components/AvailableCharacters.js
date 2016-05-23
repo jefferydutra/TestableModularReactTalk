@@ -1,11 +1,15 @@
 import React from 'react';
 import AvailableCharacter from './AvailableCharacter';
 
+function addToFavoriteWithCharacter(addToFavorite, character) {
+    return () => addToFavorite(character);
+}
+
 function renderCharacter(character, addToFavoriteCharacters) {
     return (
         <AvailableCharacter
             key={character.name}
-            addToFavoriteCharacters={addToFavoriteCharacters.bind(null, character)}
+            addToFavoriteCharacters={addToFavoriteWithCharacter(addToFavoriteCharacters, character)}
             character={character}
         />
     );

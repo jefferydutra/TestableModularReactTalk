@@ -10,12 +10,16 @@ function renderLink(link) {
 }
 
 
+function setFavoriteSeriesForCharacter(setAsFavoriteSeries, name) {
+    return () => setAsFavoriteSeries(name);
+}
+
 function renderSeries(series, setAsFavoriteSeries) {
     return (
         <Series
             series={series}
             key={series.name}
-            setAsFavoriteSeries={setAsFavoriteSeries.bind(null, series.name)}
+            setAsFavoriteSeries={setFavoriteSeriesForCharacter(setAsFavoriteSeries, series.name)}
         />
     );
 }

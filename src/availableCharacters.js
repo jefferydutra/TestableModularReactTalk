@@ -1,4 +1,4 @@
-
+/*eslint-disable*/
 
 export default [
     {
@@ -1742,3 +1742,4 @@ export default [
     }
 ];
 
+/*eslint-disable*/

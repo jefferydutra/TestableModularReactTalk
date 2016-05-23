@@ -1,7 +1,7 @@
 import availableCharacters from './availableCharacters';
 
-export default () => {
-    return availableCharacters.map((character) => ({
+export default function () {
+    return availableCharacters.map(character => ({
         id: character.id,
         name: character.name,
         imageUrl: `${character.thumbnail.path}.${character.thumbnail.extension}`,

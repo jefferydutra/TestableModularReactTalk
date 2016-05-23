@@ -15,16 +15,19 @@ function renderSeries(series, setAsFavoriteSeries) {
         <Series
             series={series}
             key={series.name}
-            setAsFavoriteSeries={setAsFavoriteSeries.bind(null, series.name)}/>
+            setAsFavoriteSeries={setAsFavoriteSeries.bind(null, series.name)}
+        />
     );
 }
 
-const MyFavoriteCharacter = ({character, setAsFavoriteSeries}) =>
+const MyFavoriteCharacter = ({ character, setAsFavoriteSeries }) =>
     <div>
         <div>
             <img
                 width="250px"
-                src={character.imageUrl}/>
+                alt={`${character.name}`}
+                src={character.imageUrl}
+            />
         </div>
         <div>
             <h4>{character.name}</h4>
@@ -42,12 +45,13 @@ const MyFavoriteCharacter = ({character, setAsFavoriteSeries}) =>
 
         <div>
             <h5>Series</h5>
-            {character.series.map( (series) => renderSeries(series, setAsFavoriteSeries))}
+            {character.series.map((series) => renderSeries(series, setAsFavoriteSeries))}
         </div>
     </div>;
 
 MyFavoriteCharacter.propTypes = {
-    character: React.PropTypes.any.isRequired
+    character: React.PropTypes.any.isRequired,
+    setAsFavoriteSeries: React.PropTypes.func.isRequired
 };
 
 

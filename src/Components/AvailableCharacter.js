@@ -1,11 +1,13 @@
 import React from 'react';
 
-const AvailableCharacter = ({character, addToFavoriteCharacters}) =>
+const AvailableCharacter = ({ character, addToFavoriteCharacters }) =>
     <div>
         <div>
             <img
                 width="100px"
-                src={character.imageUrl}/>
+                alt={`character ${character.name}`}
+                src={character.imageUrl}
+            />
         </div>
         <div>
             <h4>{character.name} (Series Count: {character.seriesCount})</h4>
@@ -16,7 +18,8 @@ const AvailableCharacter = ({character, addToFavoriteCharacters}) =>
     </div>;
 
 AvailableCharacter.propTypes = {
-    character: React.PropTypes.any.isRequired
+    character: React.PropTypes.any.isRequired,
+    addToFavoriteCharacters: React.PropTypes.any.isRequired
 };
 
 

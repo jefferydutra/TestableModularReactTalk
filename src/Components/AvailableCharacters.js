@@ -6,11 +6,12 @@ function renderCharacter(character, addToFavoriteCharacters) {
         <AvailableCharacter
             key={character.name}
             addToFavoriteCharacters={addToFavoriteCharacters.bind(null, character)}
-            character={character} />
-    )
+            character={character}
+        />
+    );
 }
 
-const AvailableCharacters = ({availableCharacters, addToFavoriteCharacters}) =>
+const AvailableCharacters = ({ availableCharacters, addToFavoriteCharacters }) =>
     <div>
         <h4>Available Characters</h4>
         <ul>
@@ -19,7 +20,8 @@ const AvailableCharacters = ({availableCharacters, addToFavoriteCharacters}) =>
     </div>;
 
 AvailableCharacters.propTypes = {
-    availableCharacters: React.PropTypes.array.isRequired
+    availableCharacters: React.PropTypes.array.isRequired,
+    addToFavoriteCharacters: React.PropTypes.func.isRequired
 };
 
 

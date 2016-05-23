@@ -7,11 +7,12 @@ function renderCharacter(character, setAsFavoriteSeries) {
         <FavoriteCharacter
             key={character.name}
             setAsFavoriteSeries={setAsFavoriteSeries.bind(null, character.id)}
-            character={character} />
-    )
+            character={character}
+        />
+    );
 }
 
-const MyFavoriteCharacter = ({myFavoriteCharacters, setAsFavoriteSeries}) =>
+const MyFavoriteCharacter = ({ myFavoriteCharacters, setAsFavoriteSeries }) =>
     <div>
         <h4>My Favorite Characters</h4>
         <ul>

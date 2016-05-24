@@ -1,0 +1,45 @@
+#app {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #797E83;
+}
+
+#app > div {
+    display: flex;
+}
+
+.container-header {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    border-bottom: 0.1em solid #797E83;
+}
+
+.available-hero-container__search-bar, .available-hero-container__select-list {
+    padding: 10px;
+}
+
+.available-hero-container__search-bar {
+    display: flex;
+    flex-direction: column;
+}
+
+.available-hero-container__select-list > .select-list__hero-card {
+    display: flex;
+    background: #F4F4F4;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.available-hero-container__select-list > .select-list__hero-card > div {
+    
+}
+
+.available-hero-container__select-list > .select-list__hero-card > img {
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    padding-right: 10px;
+}
+
+.available-hero-container__select-list > .select-list__hero-card > div > .hero-card__name {
+    margin: 0;
+}

@@ -3,6 +3,7 @@ import AvailableCharacters from './Components/AvailableCharacters';
 import MyFavoriteCharacters from './Components/MyFavoriteCharacters';
 import getAvailableCharacters from './getAvailableCharacters';
 const availableCharacters = getAvailableCharacters();
+require('./Styles/App.css');
 
 const App = React.createClass({
     propTypes: {
@@ -58,15 +59,19 @@ const App = React.createClass({
     render() {
         return (
             <div>
-                {this.props.title}
-                <input
-                    value={this.state.filterText}
-                    onChange={this.onFilterTextChange}
-                />
-                <AvailableCharacters
-                    addToFavoriteCharacters={this.addToFavoriteCharacters}
-                    availableCharacters={this.state.filteredAvailableCharacters}
-                />
+                <div class="available-hero-container">
+                    <div className="available-hero-container__search-bar">
+                        <h4 className="container-header">{this.props.title}</h4>
+                        <input
+                            value={this.state.filterText}
+                            onChange={this.onFilterTextChange}
+                        />
+                    </div>
+                    <AvailableCharacters
+                        addToFavoriteCharacters={this.addToFavoriteCharacters}
+                        availableCharacters={this.state.filteredAvailableCharacters}
+                    />
+                </div>
                 <MyFavoriteCharacters
                     setAsFavoriteSeries={this.setAsFavoriteSeries}
                     myFavoriteCharacters={this.state.myFavoriteCharacters}

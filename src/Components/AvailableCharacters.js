@@ -16,11 +16,9 @@ function renderCharacter(character, addToFavoriteCharacters) {
 }
 
 const AvailableCharacters = ({ availableCharacters, addToFavoriteCharacters }) =>
-    <div>
-        <h4>Available Characters</h4>
-        <ul>
-            {availableCharacters.map(character => renderCharacter(character, addToFavoriteCharacters))}
-        </ul>
+    <div className="available-hero-container__select-list">
+        <h4 className="container-header">Available Characters</h4>
+        {availableCharacters.map(character => renderCharacter(character, addToFavoriteCharacters))}
     </div>;
 
 AvailableCharacters.propTypes = {

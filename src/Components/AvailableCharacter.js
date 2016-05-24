@@ -1,16 +1,13 @@
 import React from 'react';
 
 const AvailableCharacter = ({ character, addToFavoriteCharacters }) =>
-    <div>
+    <div className="select-list__hero-card">
+        <img
+            alt={`character ${character.name}`}
+            src={character.imageUrl}
+        />
         <div>
-            <img
-                width="100px"
-                alt={`character ${character.name}`}
-                src={character.imageUrl}
-            />
-        </div>
-        <div>
-            <h4>{character.name} (Series Count: {character.seriesCount})</h4>
+            <h4 className="hero-card__name">{character.name} (Series Count: {character.seriesCount})</h4>
             <button onClick={addToFavoriteCharacters}>
                 Add to Favorites
             </button>

@@ -1,14 +1,17 @@
 import test from 'tape';
+import deepFreeze from 'deep-freeze';
+
 import formatCharacterImageUrl from '../formatCharacterImageUrl';
 
-test('When a character thumbnail is passed in, an imageUrl is returned ', (assert) => {
-    const characterThumbnail = {
+test('ImageUrl generated from thumbnail object ', (assert) => {
+    const thumbnail = {
         path: 'testPath',
         extension: 'png'
     };
-    const expected = `${characterThumbnail.path}.${characterThumbnail.extension}`;
+    deepFreeze(thumbnail);
+    const expected = `${thumbnail.path}.${thumbnail.extension}`;
 
-    const actual = formatCharacterImageUrl(characterThumbnail);
+    const actual = formatCharacterImageUrl(thumbnail);
     assert.equal(actual, expected);
 
     assert.end();

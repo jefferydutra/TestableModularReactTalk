@@ -1,4 +1,5 @@
 import test from 'tape';
+import deepFreeze from 'deep-freeze';
 import getCharacterWithUpdatedFavoriteSeries from '../getCharacterWithUpdatedFavoriteSeries';
 
 function getCharacterWithId(id) {
@@ -13,7 +14,8 @@ test('Favorite Series is added to character', (assert) => {
         [testCharacter.id]: testCharacter
     };
 
-    const expected = characters;
+    deepFreeze(characters);
+    const expected = Object.assign({}, characters);
     expected[characterId] = Object.assign(
         {},
         characters[characterId],
@@ -35,6 +37,7 @@ test('Original character collection is returned if character does not exist', (a
         [testCharacter.id]: testCharacter
     };
 
+    deepFreeze(expected);
     const actual = getCharacterWithUpdatedFavoriteSeries(expected, characterIdThatDoesNotExist, 'test');
     assert.deepEqual(actual, expected);
 

@@ -2,6 +2,7 @@ import React from 'react';
 import AvailableCharacters from './Components/AvailableCharacters';
 import MyFavoriteCharacters from './Components/MyFavoriteCharacters';
 import getAvailableCharacters from './getAvailableCharacters';
+import getCharacterWithUpdatedFavoriteSeries from './getCharacterWithUpdatedFavoriteSeries';
 const availableCharacters = getAvailableCharacters();
 require('./Styles/App.css');
 
@@ -31,19 +32,12 @@ const App = React.createClass({
         });
     },
 
-    setAsFavoriteSeries(characterId, seriesName) {
-        const updatedCharacter = Object.assign(
-            {},
-            this.state.myFavoriteCharacters[characterId],
-            { favoriteSeriesName: seriesName }
-        );
-
-        const myFavoriteCharacters = Object.assign(
-            {},
+    setAsFavoriteSeries(characterId, favoriteSeriesName) {
+        getCharacterWithUpdatedFavoriteSeries(
             this.state.myFavoriteCharacters,
-            { [updatedCharacter.id]: updatedCharacter }
+            characterId,
+            favoriteSeriesName
         );
-        this.setState({ myFavoriteCharacters });
     },
 
     addToFavoriteCharacters(character) {
@@ -59,7 +53,7 @@ const App = React.createClass({
     render() {
         return (
             <div>
-                <div class="available-hero-container">
+                <div className="available-hero-container">
                     <div className="available-hero-container__search-bar">
                         <h4 className="container-header">{this.props.title}</h4>
                         <input

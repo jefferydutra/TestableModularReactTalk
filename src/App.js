@@ -49,7 +49,6 @@ const App = React.createClass({
         this.setState({ myFavoriteCharacters });
     },
 
-
     render() {
         return (
             <div>
@@ -62,6 +61,7 @@ const App = React.createClass({
                         />
                     </div>
                     <AvailableCharacters
+                        myFavoriteCharacters={this.state.myFavoriteCharacters}
                         addToFavoriteCharacters={this.addToFavoriteCharacters}
                         availableCharacters={this.state.filteredAvailableCharacters}
                     />

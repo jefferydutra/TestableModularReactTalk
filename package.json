@@ -7,7 +7,7 @@
     "clean": "rimraf lib",
     "compile": "babel src --out-dir lib",
     "lint": "eslint src",
-    "test": "tape -r babel-register src/**/*-test.js faucet ",
+    "test": "tape -r babel-register src/**/*-test.js | tap-spec",
     "watch": "nodemon --exec npm run test --watch src",
     "pretest": "npm run lint",
     "start": "webpack-dev-server --inline --content-base ."
@@ -42,6 +42,7 @@
     "nodemon": "^1.8.1",
     "rimraf": "^2.3.4",
     "style-loader": "^0.13.0",
+    "tap-spec": "^4.1.1",
     "tape": "^4.4.0",
     "webpack": "^1.12.13",
     "webpack-dev-server": "^1.14.1"

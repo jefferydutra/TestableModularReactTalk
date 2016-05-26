@@ -1,20 +1,30 @@
 import React from 'react';
+import classnames from 'classnames';
 
-const AvailableCharacter = ({ character, addToFavoriteCharacters, isFavorite }) =>
-    <div className="select-list__hero-card">
-        <img
-            alt={`character ${character.name}`}
-            src={character.imageUrl}
 
-        />
-        {isFavorite}
-        <div>
-            <h4 className="hero-card__name">{character.name} (Series Count: {character.seriesCount})</h4>
-            <button onClick={addToFavoriteCharacters}>
-                Add to Favorites
-            </button>
+function AvailableCharacter({ character, addToFavoriteCharacters, isFavorite }) {
+
+    const className = classnames({
+        'select-list__hero-card': !isFavorite,
+        'select-list__hero-card isFavorite': isFavorite
+    });
+    return (
+        <div className={className}>
+            <img
+                alt={`character ${character.name}`}
+                src={character.imageUrl}
+
+            />
+            <div>
+                <h4 className="hero-card__name">{character.name}
+                    (Series Count: {character.seriesCount})</h4>
+                <button onClick={addToFavoriteCharacters}>
+                    Add to Favorites
+                </button>
+            </div>
         </div>
-    </div>;
+    )
+}
 
 AvailableCharacter.propTypes = {
     character: React.PropTypes.any.isRequired,

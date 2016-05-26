@@ -1,10 +1,18 @@
 import React from 'react';
-import classnames from 'classnames';
+import classNames from 'classnames';
 
+function renderButtonIfNotFavorite(isFavorite, addToFavoriteCharacters) {
+    if (isFavorite) return null;
+
+    return (
+        <button onClick={addToFavoriteCharacters}>
+            Add to Favorites
+        </button>
+    );
+}
 
 function AvailableCharacter({ character, addToFavoriteCharacters, isFavorite }) {
-
-    const className = classnames({
+    const className = classNames({
         'select-list__hero-card': !isFavorite,
         'select-list__hero-card isFavorite': isFavorite
     });
@@ -13,17 +21,14 @@ function AvailableCharacter({ character, addToFavoriteCharacters, isFavorite }) 
             <img
                 alt={`character ${character.name}`}
                 src={character.imageUrl}
-
             />
             <div>
                 <h4 className="hero-card__name">{character.name}
                     (Series Count: {character.seriesCount})</h4>
-                <button onClick={addToFavoriteCharacters}>
-                    Add to Favorites
-                </button>
+                {renderButtonIfNotFavorite(isFavorite, addToFavoriteCharacters)}
             </div>
         </div>
-    )
+    );
 }
 
 AvailableCharacter.propTypes = {

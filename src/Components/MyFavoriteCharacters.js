@@ -1,6 +1,8 @@
 import React from 'react';
 import FavoriteCharacter from './FavoriteCharacter';
+import SectionTitle from './SectionTitle';
 import _ from 'lodash';
+
 function setFavoriteSeriesWithId(setAsFavoriteSeries, id) {
     return () => setAsFavoriteSeries(id);
 }
@@ -16,8 +18,8 @@ function renderCharacter(character, setAsFavoriteSeries) {
 }
 
 const MyFavoriteCharacter = ({ myFavoriteCharacters, setAsFavoriteSeries }) =>
-    <div className="favorite-characters-container">
-        <h4 className="container-header">My Favorite Characters</h4>
+    <div className="app__content">
+        <SectionTitle>My Favorite Characters</SectionTitle>
         {_.map(myFavoriteCharacters, character => renderCharacter(character, setAsFavoriteSeries))}
     </div>;
 

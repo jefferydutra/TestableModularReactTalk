@@ -5,18 +5,18 @@ import CharacterSeriesList from './CharacterSeriesList';
 
 function MyFavoriteCharacter(props) {
     return (
-        <div className="three-column-container">
-            <div className="three-column-container__left">
+        <div className="grid">
+            <div className="grid__column">
                 <img
-                    width="250px"
+                    width="100%"
                     alt={`${props.character.name}`}
                     src={props.character.imageUrl}
                 />
             </div>
-            <div className="three-column-container__middle">
+            <div className="grid__column">
                 <CharacterInfo {...props} />
             </div>
-            <div className="three-column-container__right">
+            <div className="grid__column">
                 <CharacterSeriesList {...props} />
             </div>
         </div>

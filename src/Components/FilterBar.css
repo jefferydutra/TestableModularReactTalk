@@ -1,0 +1,12 @@
+
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-bar__input {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+}

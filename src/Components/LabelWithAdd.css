@@ -1,0 +1,34 @@
+
+.label-with-add {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  background-color: #F5F5F5;
+  align-items: flex-end;
+}
+
+.label-with-add__label {
+  margin: auto;
+  -webkit-flex: 4 0 0;
+  flex: 4 0 0;
+}
+
+
+.label-with-add__button {
+  margin: auto;
+  -webkit-flex: 1 0 0;
+  flex: 1 0 0;
+  background: #e2e2e2;
+  border: 0;
+  line-height: 2.5em;
+  padding: 0 0 0 1em;
+  margin-bottom: 1em;
+  outline: none;
+  text-decoration: none;
+  color: #666;
+}
+
+
+.label-with-add__button:hover {
+   background: white;
+}

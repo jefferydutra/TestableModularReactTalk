@@ -1,23 +1,25 @@
 import React from 'react';
 import classNames from 'classnames';
+require('./HeroCard.css');
 
 function renderButtonIfNotFavorite(isFavorite, addToFavoriteCharacters) {
     if (isFavorite) return null;
 
     return (
         <button onClick={addToFavoriteCharacters}>
-            Add to Favorites
+            Add
         </button>
     );
 }
 
 function AvailableCharacter({ character, addToFavoriteCharacters, isFavorite }) {
-    const className = classNames('select-list__hero-card', {
-        'select-list__hero-card--isFavorite': isFavorite
+    const className = classNames('hero-card', {
+        'hero-card--isFavorite ': isFavorite
     });
     return (
         <div className={className}>
             <img
+                className="hero-card__image"
                 alt={`character ${character.name}`}
                 src={character.imageUrl}
             />

@@ -1,0 +1,23 @@
+
+.hero-card {
+  display: flex;
+  background: #F1F1F1;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.hero-card--isFavorite {
+  background: #F5F5F5;
+}
+
+.hero-card__image {
+  height: 5em;
+  width: 5em;
+  border-radius: 50%;
+  padding-right: 10px;
+}
+.hero-card__name {
+  margin: 0;
+}
+
+

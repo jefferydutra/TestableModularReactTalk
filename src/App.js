@@ -1,6 +1,7 @@
 import React from 'react';
 import AvailableCharacters from './Components/AvailableCharacters';
 import MyFavoriteCharacters from './Components/MyFavoriteCharacters';
+import FilterBar from './Components/FilterBar';
 import getAvailableCharacters from './getAvailableCharacters';
 import getCharacterWithUpdatedFavoriteSeries from './getCharacterWithUpdatedFavoriteSeries';
 const availableCharacters = getAvailableCharacters();
@@ -33,6 +34,7 @@ const App = React.createClass({
     },
 
     setAsFavoriteSeries(characterId, favoriteSeriesName) {
+        console.log(characterId, favoriteSeriesName);
         getCharacterWithUpdatedFavoriteSeries(
             this.state.myFavoriteCharacters,
             characterId,
@@ -51,15 +53,13 @@ const App = React.createClass({
 
     render() {
         return (
-            <div>
-                <div className="available-hero-container">
-                    <div className="available-hero-container__search-bar">
-                        <h4 className="container-header">{this.props.title}</h4>
-                        <input
-                            value={this.state.filterText}
-                            onChange={this.onFilterTextChange}
-                        />
-                    </div>
+            <div className="app">
+                <div className="app__menu">
+                    <FilterBar
+                        filterText={this.state.filterText}
+                        title={this.props.title}
+                        onFilterTextChange={this.onFilterTextChange}
+                    />
                     <AvailableCharacters
                         myFavoriteCharacters={this.state.myFavoriteCharacters}
                         addToFavoriteCharacters={this.addToFavoriteCharacters}

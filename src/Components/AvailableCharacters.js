@@ -1,5 +1,6 @@
 import React from 'react';
-import AvailableCharacter from './AvailableCharacter';
+import AvailableCharacter from './HeroCard';
+import SectionTitle from './SectionTitle';
 import isFavoriteCharacter from '../isFavoriteCharacter';
 
 function addToFavoriteWithCharacter(addToFavorite, character) {
@@ -18,8 +19,10 @@ function renderCharacter(character, addToFavoriteCharacters, myFavoriteCharacter
 }
 
 const AvailableCharacters = ({ availableCharacters, addToFavoriteCharacters, myFavoriteCharacters }) =>
-    <div className="available-hero-container__select-list">
-        <h4 className="container-header">Available Characters</h4>
+    <div>
+        <SectionTitle>
+            Available Characters
+        </SectionTitle>
         {availableCharacters.map(character => renderCharacter(
             character,
             addToFavoriteCharacters,

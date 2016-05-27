@@ -1,5 +1,5 @@
 import React from 'react';
-import Series from './Series';
+import LabelWithAdd from './LabelWithAdd';
 require('./CharacterSeriesList.css');
 
 function setFavoriteSeriesForCharacter(setAsFavoriteSeries, name) {
@@ -8,18 +8,19 @@ function setFavoriteSeriesForCharacter(setAsFavoriteSeries, name) {
 
 function renderSeries(series, setAsFavoriteSeries) {
     return (
-        <Series
-            series={series}
+        <LabelWithAdd
             key={series.name}
-            setAsFavoriteSeries={setFavoriteSeriesForCharacter(setAsFavoriteSeries, series.name)}
-        />
+            add={setFavoriteSeriesForCharacter(setAsFavoriteSeries, series.name)}
+        >
+            {series.name}
+        </LabelWithAdd>
     );
 }
 
 function CharacterSeries({ character, setAsFavoriteSeries }) {
     return (
-        <div className="character-series">
-            <h5>Series</h5>
+        <div className="character-series-list">
+            <span className="character-series-list__title">Series</span>
             {character.series.map((series) => renderSeries(series, setAsFavoriteSeries))}
         </div>
     );

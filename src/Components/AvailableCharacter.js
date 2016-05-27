@@ -12,9 +12,8 @@ function renderButtonIfNotFavorite(isFavorite, addToFavoriteCharacters) {
 }
 
 function AvailableCharacter({ character, addToFavoriteCharacters, isFavorite }) {
-    const className = classNames({
-        'select-list__hero-card': !isFavorite,
-        'select-list__hero-card isFavorite': isFavorite
+    const className = classNames('select-list__hero-card', {
+        'select-list__hero-card--isFavorite': isFavorite
     });
     return (
         <div className={className}>

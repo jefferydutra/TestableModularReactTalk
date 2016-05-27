@@ -37,15 +37,6 @@
     width:400px;
 }
 
-.character-info > * {
-    margin: 5px 0;
-}
-
-.character-info__name {
-    margin-top: 0;
-}
-
-
 .available-hero-container > .available-hero-container__search-bar {
     display: flex;
     flex-direction: column;

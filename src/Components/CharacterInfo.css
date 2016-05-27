@@ -1,0 +1,7 @@
+.character-info > * {
+    margin: 5px 0;
+}
+
+.character-info__name {
+    margin-top: 0;
+}

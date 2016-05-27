@@ -16,11 +16,9 @@ function renderCharacter(character, setAsFavoriteSeries) {
 }
 
 const MyFavoriteCharacter = ({ myFavoriteCharacters, setAsFavoriteSeries }) =>
-    <div>
-        <h4>My Favorite Characters</h4>
-        <ul>
-            {_.map(myFavoriteCharacters, character => renderCharacter(character, setAsFavoriteSeries))}
-        </ul>
+    <div className="favorite-characters-container">
+        <h4 className="container-header">My Favorite Characters</h4>
+        {_.map(myFavoriteCharacters, character => renderCharacter(character, setAsFavoriteSeries))}
     </div>;
 
 MyFavoriteCharacter.propTypes = {

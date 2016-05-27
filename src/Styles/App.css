@@ -13,11 +13,40 @@
     border-bottom: 0.1em solid #797E83;
 }
 
-.available-hero-container__search-bar, .available-hero-container__select-list {
+.available-hero-container {
+    min-width: 465px;
     padding: 10px;
 }
 
-.available-hero-container__search-bar {
+.favorite-characters-container{
+    padding: 10px;
+    flex: 1;
+}
+
+.three-column-container {
+    display: flex;
+    padding: 10px
+}
+
+.three-column-container__middle{
+    flex: 1;
+    padding: 0 10px;
+}
+
+.three-column-container__right{
+    width:400px;
+}
+
+.character-info > * {
+    margin: 5px 0;
+}
+
+.character-info__name {
+    margin-top: 0;
+}
+
+
+.available-hero-container > .available-hero-container__search-bar {
     display: flex;
     flex-direction: column;
 }
@@ -27,10 +56,6 @@
     background: #F4F4F4;
     padding: 10px;
     margin: 10px 0;
-}
-
-.available-hero-container__select-list > .select-list__hero-card > div {
-
 }
 
 .available-hero-container__select-list > .select-list__hero-card > img {
@@ -43,3 +68,6 @@
 .available-hero-container__select-list > .select-list__hero-card > div > .hero-card__name {
     margin: 0;
 }
+
+
+

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Series = ({ series, setAsFavoriteSeries }) =>
-    <div>
+    <div className="series-container">
         <h4>{series.name}</h4>
         <button onClick={setAsFavoriteSeries}>
             Add to Favorites

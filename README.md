@@ -33,8 +33,8 @@
 * ES6 (ECMAScript 2015) mostly free course (https://egghead.io/series/learn-es6-ecmascript-2015)
 
 ### BEM
-*Get BEM (http://getbem.com/)
-*MindBEMding – getting your head ’round BEM syntax (http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
+* Get BEM (http://getbem.com/)
+* MindBEMding – getting your head ’round BEM syntax (http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
 
 ### Webpack
 * Webpack (https://webpack.github.io/)

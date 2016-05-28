@@ -15,8 +15,13 @@
 ### React
 * React (https://facebook.github.io/react/)
 * React and .Net (http://reactjs.net/)
+* React Fundamentals mostly free course (https://egghead.io/series/react-fundamentals)
 * awesome-react (https://github.com/enaqx/awesome-react)
-* 
+### Tape (tap-producing test harness for node and browsers)
+* Tape (https://github.com/substack/tape)
+* Testing JavaScript Modules with Tape (https://ponyfoo.com/articles/testing-javascript-modules-with-tape)
+* Why I use Tape Instead of Mocha & So Should Youe (https://medium.com/javascript-scene/why-i-use-tape-instead-of-mocha-so-should-you-6aa105d8eaf4#.oafkqae8w)
+
 ### Redux
 * Predictable state container for JavaScript apps (https://github.com/reactjs/redux)
 * Getting Started with Redux free amazing  course by the creator of redux (https://egghead.io/series/getting-started-with-redux)

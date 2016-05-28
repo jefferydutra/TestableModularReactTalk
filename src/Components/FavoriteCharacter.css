@@ -1,10 +1,10 @@
 
 .favorite-character {
-    margin: auto;
     width: 400px;
     display: flex;
     flex-flow: column;
     align-items: stretch;
+    margin: 0 10px;
 }
 
 .favorite-character__details-section {

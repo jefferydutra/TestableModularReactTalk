@@ -35,12 +35,12 @@ const App = React.createClass({
     },
 
     setAsFavoriteSeries(characterId, favoriteSeriesName) {
-        console.log(characterId, favoriteSeriesName);
-        getCharacterWithUpdatedFavoriteSeries(
+        const myFavoriteCharacters = getCharacterWithUpdatedFavoriteSeries(
             this.state.myFavoriteCharacters,
             characterId,
             favoriteSeriesName
         );
+        this.setState({ myFavoriteCharacters });
     },
 
     addToFavoriteCharacters(character) {

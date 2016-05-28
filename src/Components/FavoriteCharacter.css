@@ -1,7 +1,7 @@
 
 .favorite-character {
     margin: auto;
-    width: 800px;
+    width: 400px;
     display: flex;
     flex-flow: column;
     align-items: stretch;
@@ -9,6 +9,7 @@
 
 .favorite-character__details-section {
     margin: auto;
+    width: 100%;
 }
 
 
@@ -19,7 +20,7 @@
 
 
 .favorite-character__character-image {
-    width:350px;
-    height:350px;
+    width:300px;
+    height:300px;
     border-radius: 50%;
 }

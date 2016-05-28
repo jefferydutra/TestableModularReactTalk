@@ -3,10 +3,13 @@
 }
 
 .character-info__name {
-    margin-top: 0;
-    font-size: 1.7em;
+    margin: 5px 0;
+    font-size: 1.4em;
 }
 
+.character-info__fav-series-label {
+    font-size: 1.2em;
+}
 .character-info__fav-series {
-    font-size: 1.7em;
+    font-size: 1.2em;
 }

@@ -4,15 +4,11 @@ import SectionTitle from './SectionTitle';
 require('./MyFavoriteCharacters.css');
 import _ from 'lodash';
 
-function setFavoriteSeriesWithId(setAsFavoriteSeries, id) {
-    return () => setAsFavoriteSeries(id);
-}
-
 function renderCharacter(character, setAsFavoriteSeries) {
     return (
         <FavoriteCharacter
             key={character.name}
-            setAsFavoriteSeries={setFavoriteSeriesWithId(setAsFavoriteSeries, character.id)}
+            setAsFavoriteSeries={setAsFavoriteSeries}
             character={character}
         />
     );

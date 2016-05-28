@@ -10,7 +10,7 @@
     "test": "tape -r babel-register src/**/*-test.js | tap-spec",
     "watch": "nodemon --exec npm run test --watch src",
     "pretest": "npm run lint",
-    "start": "webpack-dev-server --inline --content-base ."
+    "start": "webpack-dev-server -d --inline --content-base ."
   },
   "author": "",
   "license": "ISC",

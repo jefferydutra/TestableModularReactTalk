@@ -4,8 +4,6 @@
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: flex-end;
-  align-items: flex-end;
 }
 .character-series-list__title {
   text-transform: uppercase;

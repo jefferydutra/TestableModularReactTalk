@@ -1,5 +1,6 @@
 import availableCharacters from './availableCharacters';
 import formatCharacterImageUrl from './formatCharacterImageUrl';
+import _ from 'lodash';
 
 export default function () {
     return availableCharacters.map(character => ({
@@ -8,7 +9,7 @@ export default function () {
         imageUrl: formatCharacterImageUrl(character.thumbnail),
         description: character.description,
         seriesCount: character.series.available,
-        series: character.series.items,
+        series: _.takeRight(character.series.items, 4),
         favoriteSeriesName: '',
         urls: character.urls
     }));

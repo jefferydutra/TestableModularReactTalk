@@ -1,0 +1,25 @@
+
+.favorite-character {
+    margin: auto;
+    width: 800px;
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+}
+
+.favorite-character__details-section {
+    margin: auto;
+}
+
+
+.favorite-character__series-section {
+    margin: auto;
+    width: 100%;
+}
+
+
+.favorite-character__character-image {
+    width:350px;
+    height:350px;
+    border-radius: 50%;
+}

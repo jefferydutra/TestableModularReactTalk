@@ -1,31 +1,30 @@
 import React from 'react';
 import CharacterInfo from './CharacterInfo';
 import CharacterSeriesList from './CharacterSeriesList';
+require('./FavoriteCharacter.css');
 
 
-function MyFavoriteCharacter(props) {
+function FavoriteCharacter(props) {
     return (
-        <div className="grid">
-            <div className="grid__column">
+        <div className="favorite-character">
+            <div className="favorite-character__details-section">
                 <img
-                    width="100%"
+                    className="favorite-character__character-image"
                     alt={`${props.character.name}`}
                     src={props.character.imageUrl}
                 />
-            </div>
-            <div className="grid__column">
                 <CharacterInfo {...props} />
             </div>
-            <div className="grid__column">
+            <div className="favorite-character__series-section ">
                 <CharacterSeriesList {...props} />
             </div>
         </div>
     );
 }
 
-MyFavoriteCharacter.propTypes = {
+FavoriteCharacter.propTypes = {
     character: React.PropTypes.any.isRequired
 };
 
 
-export default MyFavoriteCharacter;
+export default FavoriteCharacter;

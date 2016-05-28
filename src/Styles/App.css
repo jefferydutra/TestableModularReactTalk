@@ -1,7 +1,11 @@
-.app {
+.container {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #797E83;
+}
+
+.app {
   display: flex;
+  width: 100%;
   flex-flow: row;
   justify-content: center;
   flex-wrap: wrap;
@@ -12,18 +16,29 @@
 }
 
 .app__content {
-  width: 70%;
+  margin-left: 2%;
+  width: 73%;
 }
+
+.heroMenu{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+
 
 .grid{
   display: flex;
   flex-flow: row;
   justify-content: space-around;
-  align-items: flex-start;
   flex-wrap: wrap;
+  align-items: stretch;
 }
 
 .grid__column {
-  width:33%;
+  margin: auto;
 }
 

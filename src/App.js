@@ -2,6 +2,7 @@ import React from 'react';
 import AvailableCharacters from './Components/AvailableCharacters';
 import MyFavoriteCharacters from './Components/MyFavoriteCharacters';
 import FilterBar from './Components/FilterBar';
+import SectionTitle from './Components/SectionTitle';
 import getAvailableCharacters from './getAvailableCharacters';
 import getCharacterWithUpdatedFavoriteSeries from './getCharacterWithUpdatedFavoriteSeries';
 const availableCharacters = getAvailableCharacters();
@@ -53,23 +54,32 @@ const App = React.createClass({
 
     render() {
         return (
-            <div className="app">
-                <div className="app__menu">
-                    <FilterBar
-                        filterText={this.state.filterText}
-                        title={this.props.title}
-                        onFilterTextChange={this.onFilterTextChange}
-                    />
-                    <AvailableCharacters
-                        myFavoriteCharacters={this.state.myFavoriteCharacters}
-                        addToFavoriteCharacters={this.addToFavoriteCharacters}
-                        availableCharacters={this.state.filteredAvailableCharacters}
-                    />
+            <div>
+                <h1>{this.props.title}</h1>
+                <div className="container">
+                    <div className="app">
+                        <div className="app__menu">
+
+                            <SectionTitle>
+                                Available Characters
+                            </SectionTitle>
+                            <FilterBar
+                                filterText={this.state.filterText}
+                                title={this.props.title}
+                                onFilterTextChange={this.onFilterTextChange}
+                            />
+                            <AvailableCharacters
+                                myFavoriteCharacters={this.state.myFavoriteCharacters}
+                                addToFavoriteCharacters={this.addToFavoriteCharacters}
+                                availableCharacters={this.state.filteredAvailableCharacters}
+                            />
+                        </div>
+                        <MyFavoriteCharacters
+                            setAsFavoriteSeries={this.setAsFavoriteSeries}
+                            myFavoriteCharacters={this.state.myFavoriteCharacters}
+                        />
+                    </div>
                 </div>
-                <MyFavoriteCharacters
-                    setAsFavoriteSeries={this.setAsFavoriteSeries}
-                    myFavoriteCharacters={this.state.myFavoriteCharacters}
-                />
             </div>
         );
     }

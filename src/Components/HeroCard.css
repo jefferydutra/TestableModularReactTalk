@@ -1,23 +1,36 @@
 
 .hero-card {
-  display: flex;
-  background: #F1F1F1;
-  padding: 10px;
-  margin: 10px 0;
+    display: flex;
+    background: #F1F1F1;
+    margin: auto;
+    width: 100%;
+    margin-top: 10px;
+    flex-flow: row;
+    align-items: flex-end;
 }
 
 .hero-card--isFavorite {
-  background: #F5F5F5;
+    background: powderblue;
+}
+
+.hero-card__image-section {
+    margin: auto;
+    -webkit-flex: 1 0 0;
+    flex: 1 0 0;
 }
 
 .hero-card__image {
-  height: 5em;
-  width: 5em;
-  border-radius: 50%;
-  padding-right: 10px;
+    width:150px;
+    border-radius: 50%;
 }
+
+.hero-card__information {
+    margin: auto;
+    -webkit-flex: 3 0 0;
+    flex: 3 0 0;
+}
+
 .hero-card__name {
-  margin: 0;
 }
 
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import AvailableCharacter from './HeroCard';
-import SectionTitle from './SectionTitle';
 import isFavoriteCharacter from '../isFavoriteCharacter';
 
 function addToFavoriteWithCharacter(addToFavorite, character) {
@@ -19,10 +18,7 @@ function renderCharacter(character, addToFavoriteCharacters, myFavoriteCharacter
 }
 
 const AvailableCharacters = ({ availableCharacters, addToFavoriteCharacters, myFavoriteCharacters }) =>
-    <div>
-        <SectionTitle>
-            Available Characters
-        </SectionTitle>
+    <div className="heroMenu">
         {availableCharacters.map(character => renderCharacter(
             character,
             addToFavoriteCharacters,

@@ -1,13 +1,16 @@
 import React from 'react';
+import Button from './Button';
 require('./LabelWithAdd.css');
 
 function LabelWithAdd({ children, add }) {
     return (
         <div className="label-with-add">
             <div className="label-with-add__label">{children}</div>
-            <button className="label-with-add__button" onClick={add}>
-                Add
-            </button>
+            <div className="label-with-add__button-section">
+                <Button onClick={add}>
+                    Add
+                </Button>
+            </div>
         </div>
     );
 }

@@ -1,7 +1,12 @@
-.character-info > * {
+.character-info {
     margin: 5px 0;
 }
 
 .character-info__name {
     margin-top: 0;
+    font-size: 1.7em;
+}
+
+.character-info__fav-series {
+    font-size: 1.7em;
 }

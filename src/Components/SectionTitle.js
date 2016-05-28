@@ -3,7 +3,7 @@ require('./SectionTitle.css');
 
 function SectionTitle({ children }) {
     return (
-        <h4 className="section-title">{children}</h4>
+        <h2 className="section-title">{children}</h2>
     );
 }
 

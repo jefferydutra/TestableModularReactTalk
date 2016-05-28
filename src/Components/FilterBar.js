@@ -1,13 +1,9 @@
 import React from 'react';
-import SectionTitle from './SectionTitle';
 require('./FilterBar.css');
 
-function FilterBar({ title, filterText, onFilterTextChange }) {
+function FilterBar({ filterText, onFilterTextChange }) {
     return (
         <div className="filter-bar">
-            <SectionTitle>
-                {title}
-            </SectionTitle>
             <input
                 placeholder="filter characters .."
                 className="filter-bar__input"

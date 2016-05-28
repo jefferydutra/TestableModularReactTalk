@@ -12,11 +12,11 @@ function renderLink(link) {
 function CharacterInfo({ character }) {
     return (
         <div className="character-info">
-            <h2 className="character-info__name">{character.name}</h2>
-            <p className="character-info__fav-series">
+            <h3 className="character-info__name">{character.name}</h3>
+            <h3 className="character-info__fav-series">
                 Favorite Series: {character.favoriteSeriesName}
-            </p>
-            <h5>Links:</h5>
+            </h3>
+            <h3>Links:</h3>
             <ul>
                 {character.urls.map(renderLink)}
             </ul>

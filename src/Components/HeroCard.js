@@ -1,14 +1,15 @@
 import React from 'react';
 import classNames from 'classnames';
+import Button from './Button';
 require('./HeroCard.css');
 
 function renderButtonIfNotFavorite(isFavorite, addToFavoriteCharacters) {
     if (isFavorite) return null;
 
     return (
-        <button onClick={addToFavoriteCharacters}>
+        <Button onClick={addToFavoriteCharacters}>
             Add
-        </button>
+        </Button>
     );
 }
 
@@ -18,13 +19,15 @@ function AvailableCharacter({ character, addToFavoriteCharacters, isFavorite }) 
     });
     return (
         <div className={className}>
-            <img
-                className="hero-card__image"
-                alt={`character ${character.name}`}
-                src={character.imageUrl}
-            />
-            <div>
-                <h4 className="hero-card__name">{character.name}
+            <div className="hero-card__image-section">
+                <img
+                    className="hero-card__image"
+                    alt={`character ${character.name}`}
+                    src={character.imageUrl}
+                />
+            </div>
+            <div className="hero-card__information">
+                <h4 className="hero-card__name">{character.name} -
                     (Series Count: {character.seriesCount})</h4>
                 {renderButtonIfNotFavorite(isFavorite, addToFavoriteCharacters)}
             </div>

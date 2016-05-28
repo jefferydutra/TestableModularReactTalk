@@ -1,4 +1,4 @@
-# TestableModularReactTalk
+# Testable Modular React Talk
 
 
 ## To get this running

@@ -7,16 +7,18 @@
 3. Run command ```npm start``` (will run the default task and all its dependencies)
 4. Now open up http://localhost:8080 in a browser
 
- The talk covers a few major concepts including: 
+## The talk covers a few major concepts including: 
+ 
 ### Code Linting
-*ESLint (http://eslint.org/)
-*airbnb style guide (https://github.com/airbnb/javascript)
+* ESLint (http://eslint.org/)
+* airbnb style guide (https://github.com/airbnb/javascript)
 
 ### React
 * React (https://facebook.github.io/react/)
 * React and .Net (http://reactjs.net/)
 * React Fundamentals mostly free course (https://egghead.io/series/react-fundamentals)
 * awesome-react (https://github.com/enaqx/awesome-react)
+
 ### Tape (tap-producing test harness for node and browsers)
 * Tape (https://github.com/substack/tape)
 * Testing JavaScript Modules with Tape (https://ponyfoo.com/articles/testing-javascript-modules-with-tape)
